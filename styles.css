@@ -1,7 +1,8 @@
-/* Cada "tela" tem 2 colunas da altura do painel; o texto enche a da
-   esquerda, depois a da direita, e continua na tela de baixo. */
+/* Cada "tela" tem N colunas da altura do painel; o texto enche a da
+   esquerda, depois as seguintes, e continua na tela de baixo.
+   As variáveis --colunas-fixas-* vêm das configurações do plugin. */
 .colunas-fixas .markdown-reading-view {
-  --colunas-margem: 2rem;
+  --colunas-margem: var(--colunas-fixas-margem, 2rem);
 }
 
 .colunas-fixas .markdown-reading-view .markdown-preview-view {
@@ -11,8 +12,8 @@
 
 .colunas-fixas .markdown-reading-view .markdown-preview-sizer {
   --colunas-altura: calc(100cqh - 2 * var(--colunas-margem));
-  column-count: 2;
-  column-gap: 3rem;
+  column-count: var(--colunas-fixas-quantidade, 2);
+  column-gap: var(--colunas-fixas-espaco, 3rem);
   column-height: var(--colunas-altura);
   column-wrap: wrap;
   /* com esse espaçamento, cada tela começa exatamente uma altura de painel abaixo da anterior */
