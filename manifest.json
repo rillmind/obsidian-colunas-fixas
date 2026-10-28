@@ -1,0 +1,10 @@
+{
+	"id": "colunas-fixas",
+	"name": "Colunas Fixas",
+	"version": "1.1.0",
+	"minAppVersion": "1.0.0",
+	"description": "Lay out reading view in screen-height columns that stay put while you scroll.",
+	"author": "Raul Holanda Lopes",
+	"authorUrl": "https://github.com/rillmind",
+	"isDesktopOnly": false
+}
